@@ -28,6 +28,9 @@
       "@/*": [
         "./src/*"
       ],
+      "@components/*": [
+        "./src/components/*"
+      ],
       "@styles/*": [
         "./src/styles/*"
       ]
@@ -37,7 +40,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "src/app/404.js"
   ],
   "exclude": [
     "node_modules"

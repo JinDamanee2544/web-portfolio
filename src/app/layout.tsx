@@ -1,5 +1,7 @@
 import '@styles/globals.css'
 import { Inter } from '@next/font/google'
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -9,13 +11,19 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={inter.className}>
+    <html lang="en" className={`${inter.className} scroll-smooth`}>
       {/*
         <head /> will contain the components returned by the nearest parent
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>{children}</body>
+      <body>
+        <main className='bg-hero'>
+          <Navbar />
+          {children}
+          <Footer />
+        </main>
+      </body>
     </html>
   )
 }
